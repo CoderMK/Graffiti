@@ -1,0 +1,748 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C39C87B4C0D027F27713C68 /* libPods-Graffiti.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F877417DE520A14502F412 /* libPods-Graffiti.a */; };
+		9D07139F1EA5E732009D87CB /* LFHToolDrawViewToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D07139E1EA5E732009D87CB /* LFHToolDrawViewToImage.m */; };
+		9D0713A21EA6018D009D87CB /* LFHBottomToolBtnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0713A11EA6018D009D87CB /* LFHBottomToolBtnItem.m */; };
+		9D496F501EA37BDC00183A6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D496F4F1EA37BDC00183A6B /* main.m */; };
+		9D496F531EA37BDC00183A6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D496F521EA37BDC00183A6B /* AppDelegate.m */; };
+		9D496F5B1EA37BDD00183A6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D496F5A1EA37BDD00183A6B /* Assets.xcassets */; };
+		9D496F5E1EA37BDD00183A6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D496F5C1EA37BDD00183A6B /* LaunchScreen.storyboard */; };
+		9D496F691EA37BDD00183A6B /* GraffitiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D496F681EA37BDD00183A6B /* GraffitiTests.m */; };
+		9D496F741EA37BDD00183A6B /* GraffitiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D496F731EA37BDD00183A6B /* GraffitiUITests.m */; };
+		9D7447B01EA4A8EE00C767A4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D7447AF1EA4A8EE00C767A4 /* Default-568h@2x.png */; };
+		9D7447C91EA4BD8B00C767A4 /* LFHImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447B71EA4BD8B00C767A4 /* LFHImagePickerViewController.m */; };
+		9D7447CA1EA4BD8B00C767A4 /* LFHNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447B91EA4BD8B00C767A4 /* LFHNavViewController.m */; };
+		9D7447CB1EA4BD8B00C767A4 /* LFHBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447BD1EA4BD8B00C767A4 /* LFHBezierPath.m */; };
+		9D7447CC1EA4BD8B00C767A4 /* LFHGraffitiBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447C11EA4BD8B00C767A4 /* LFHGraffitiBoardViewController.m */; };
+		9D7447CD1EA4BD8B00C767A4 /* LFHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447C31EA4BD8B00C767A4 /* LFHMainViewController.m */; };
+		9D7447CE1EA4BD8B00C767A4 /* LFHPhotoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447C51EA4BD8B00C767A4 /* LFHPhotoEditViewController.m */; };
+		9D7447D71EA4C47E00C767A4 /* LFHGFDrawingBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447D61EA4C47E00C767A4 /* LFHGFDrawingBoardView.m */; };
+		9D7447DA1EA4C49200C767A4 /* LFHGFBottomToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447D91EA4C49200C767A4 /* LFHGFBottomToolsView.m */; };
+		9D7447DD1EA4CF8C00C767A4 /* LFHGFHandleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447DC1EA4CF8C00C767A4 /* LFHGFHandleImageView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9D496F651EA37BDD00183A6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D496F431EA37BDC00183A6B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D496F4A1EA37BDC00183A6B;
+			remoteInfo = Graffiti;
+		};
+		9D496F701EA37BDD00183A6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D496F431EA37BDC00183A6B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D496F4A1EA37BDC00183A6B;
+			remoteInfo = Graffiti;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3ABA430BCC55239167420A37 /* Pods-Graffiti.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graffiti.release.xcconfig"; path = "Pods/Target Support Files/Pods-Graffiti/Pods-Graffiti.release.xcconfig"; sourceTree = "<group>"; };
+		9D07139D1EA5E732009D87CB /* LFHToolDrawViewToImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHToolDrawViewToImage.h; sourceTree = "<group>"; };
+		9D07139E1EA5E732009D87CB /* LFHToolDrawViewToImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHToolDrawViewToImage.m; sourceTree = "<group>"; };
+		9D0713A01EA6018D009D87CB /* LFHBottomToolBtnItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHBottomToolBtnItem.h; sourceTree = "<group>"; };
+		9D0713A11EA6018D009D87CB /* LFHBottomToolBtnItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHBottomToolBtnItem.m; sourceTree = "<group>"; };
+		9D496F4B1EA37BDC00183A6B /* Graffiti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graffiti.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D496F4F1EA37BDC00183A6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9D496F511EA37BDC00183A6B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9D496F521EA37BDC00183A6B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9D496F5A1EA37BDD00183A6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D496F5D1EA37BDD00183A6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D496F5F1EA37BDD00183A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D496F641EA37BDD00183A6B /* GraffitiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraffitiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D496F681EA37BDD00183A6B /* GraffitiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraffitiTests.m; sourceTree = "<group>"; };
+		9D496F6A1EA37BDD00183A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D496F6F1EA37BDD00183A6B /* GraffitiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraffitiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D496F731EA37BDD00183A6B /* GraffitiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraffitiUITests.m; sourceTree = "<group>"; };
+		9D496F751EA37BDD00183A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D7447AF1EA4A8EE00C767A4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9D7447B61EA4BD8B00C767A4 /* LFHImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHImagePickerViewController.h; sourceTree = "<group>"; };
+		9D7447B71EA4BD8B00C767A4 /* LFHImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHImagePickerViewController.m; sourceTree = "<group>"; };
+		9D7447B81EA4BD8B00C767A4 /* LFHNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHNavViewController.h; sourceTree = "<group>"; };
+		9D7447B91EA4BD8B00C767A4 /* LFHNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHNavViewController.m; sourceTree = "<group>"; };
+		9D7447BC1EA4BD8B00C767A4 /* LFHBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHBezierPath.h; sourceTree = "<group>"; };
+		9D7447BD1EA4BD8B00C767A4 /* LFHBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHBezierPath.m; sourceTree = "<group>"; };
+		9D7447C01EA4BD8B00C767A4 /* LFHGraffitiBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHGraffitiBoardViewController.h; sourceTree = "<group>"; };
+		9D7447C11EA4BD8B00C767A4 /* LFHGraffitiBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHGraffitiBoardViewController.m; sourceTree = "<group>"; };
+		9D7447C21EA4BD8B00C767A4 /* LFHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHMainViewController.h; sourceTree = "<group>"; };
+		9D7447C31EA4BD8B00C767A4 /* LFHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHMainViewController.m; sourceTree = "<group>"; };
+		9D7447C41EA4BD8B00C767A4 /* LFHPhotoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHPhotoEditViewController.h; sourceTree = "<group>"; };
+		9D7447C51EA4BD8B00C767A4 /* LFHPhotoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHPhotoEditViewController.m; sourceTree = "<group>"; };
+		9D7447D51EA4C47E00C767A4 /* LFHGFDrawingBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHGFDrawingBoardView.h; sourceTree = "<group>"; };
+		9D7447D61EA4C47E00C767A4 /* LFHGFDrawingBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHGFDrawingBoardView.m; sourceTree = "<group>"; };
+		9D7447D81EA4C49200C767A4 /* LFHGFBottomToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHGFBottomToolsView.h; sourceTree = "<group>"; };
+		9D7447D91EA4C49200C767A4 /* LFHGFBottomToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHGFBottomToolsView.m; sourceTree = "<group>"; };
+		9D7447DB1EA4CF8C00C767A4 /* LFHGFHandleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHGFHandleImageView.h; sourceTree = "<group>"; };
+		9D7447DC1EA4CF8C00C767A4 /* LFHGFHandleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHGFHandleImageView.m; sourceTree = "<group>"; };
+		E9F877417DE520A14502F412 /* libPods-Graffiti.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Graffiti.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8DA86C35C393E09C90B9962 /* Pods-Graffiti.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graffiti.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Graffiti/Pods-Graffiti.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D496F481EA37BDC00183A6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C39C87B4C0D027F27713C68 /* libPods-Graffiti.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D496F611EA37BDD00183A6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D496F6C1EA37BDD00183A6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04AEA881879E3E21ADC2F9FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9F877417DE520A14502F412 /* libPods-Graffiti.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D496F421EA37BDC00183A6B = {
+			isa = PBXGroup;
+			children = (
+				9D7447AF1EA4A8EE00C767A4 /* Default-568h@2x.png */,
+				9D496F4D1EA37BDC00183A6B /* Graffiti */,
+				9D496F671EA37BDD00183A6B /* GraffitiTests */,
+				9D496F721EA37BDD00183A6B /* GraffitiUITests */,
+				9D496F4C1EA37BDC00183A6B /* Products */,
+				AA5DE9F341FA8631588B17BF /* Pods */,
+				04AEA881879E3E21ADC2F9FF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9D496F4C1EA37BDC00183A6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D496F4B1EA37BDC00183A6B /* Graffiti.app */,
+				9D496F641EA37BDD00183A6B /* GraffitiTests.xctest */,
+				9D496F6F1EA37BDD00183A6B /* GraffitiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D496F4D1EA37BDC00183A6B /* Graffiti */ = {
+			isa = PBXGroup;
+			children = (
+				9D7447B31EA4BD8B00C767A4 /* Classes */,
+				9D496F4E1EA37BDC00183A6B /* Supporting Files */,
+			);
+			path = Graffiti;
+			sourceTree = "<group>";
+		};
+		9D496F4E1EA37BDC00183A6B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D496F4F1EA37BDC00183A6B /* main.m */,
+				9D496F511EA37BDC00183A6B /* AppDelegate.h */,
+				9D496F521EA37BDC00183A6B /* AppDelegate.m */,
+				9D496F5A1EA37BDD00183A6B /* Assets.xcassets */,
+				9D496F5C1EA37BDD00183A6B /* LaunchScreen.storyboard */,
+				9D496F5F1EA37BDD00183A6B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D496F671EA37BDD00183A6B /* GraffitiTests */ = {
+			isa = PBXGroup;
+			children = (
+				9D496F681EA37BDD00183A6B /* GraffitiTests.m */,
+				9D496F6A1EA37BDD00183A6B /* Info.plist */,
+			);
+			path = GraffitiTests;
+			sourceTree = "<group>";
+		};
+		9D496F721EA37BDD00183A6B /* GraffitiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9D496F731EA37BDD00183A6B /* GraffitiUITests.m */,
+				9D496F751EA37BDD00183A6B /* Info.plist */,
+			);
+			path = GraffitiUITests;
+			sourceTree = "<group>";
+		};
+		9D7447B31EA4BD8B00C767A4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9D7447C71EA4BD8B00C767A4 /* Tools */,
+				9D7447B41EA4BD8B00C767A4 /* Base */,
+				9D7447BF1EA4BD8B00C767A4 /* Controllers */,
+				9D7447C61EA4BD8B00C767A4 /* Models */,
+				9D7447C81EA4BD8B00C767A4 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9D7447B41EA4BD8B00C767A4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9D7447B51EA4BD8B00C767A4 /* Controllers */,
+				9D7447BA1EA4BD8B00C767A4 /* Models */,
+				9D7447BB1EA4BD8B00C767A4 /* Others */,
+				9D7447BE1EA4BD8B00C767A4 /* Views */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9D7447B51EA4BD8B00C767A4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D7447B61EA4BD8B00C767A4 /* LFHImagePickerViewController.h */,
+				9D7447B71EA4BD8B00C767A4 /* LFHImagePickerViewController.m */,
+				9D7447B81EA4BD8B00C767A4 /* LFHNavViewController.h */,
+				9D7447B91EA4BD8B00C767A4 /* LFHNavViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9D7447BA1EA4BD8B00C767A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9D7447BB1EA4BD8B00C767A4 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				9D7447BC1EA4BD8B00C767A4 /* LFHBezierPath.h */,
+				9D7447BD1EA4BD8B00C767A4 /* LFHBezierPath.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		9D7447BE1EA4BD8B00C767A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9D7447BF1EA4BD8B00C767A4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D7447C21EA4BD8B00C767A4 /* LFHMainViewController.h */,
+				9D7447C31EA4BD8B00C767A4 /* LFHMainViewController.m */,
+				9D7447C01EA4BD8B00C767A4 /* LFHGraffitiBoardViewController.h */,
+				9D7447C11EA4BD8B00C767A4 /* LFHGraffitiBoardViewController.m */,
+				9D7447C41EA4BD8B00C767A4 /* LFHPhotoEditViewController.h */,
+				9D7447C51EA4BD8B00C767A4 /* LFHPhotoEditViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9D7447C61EA4BD8B00C767A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D0713A01EA6018D009D87CB /* LFHBottomToolBtnItem.h */,
+				9D0713A11EA6018D009D87CB /* LFHBottomToolBtnItem.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9D7447C71EA4BD8B00C767A4 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				9D07139D1EA5E732009D87CB /* LFHToolDrawViewToImage.h */,
+				9D07139E1EA5E732009D87CB /* LFHToolDrawViewToImage.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		9D7447C81EA4BD8B00C767A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9D7447D51EA4C47E00C767A4 /* LFHGFDrawingBoardView.h */,
+				9D7447D61EA4C47E00C767A4 /* LFHGFDrawingBoardView.m */,
+				9D7447D81EA4C49200C767A4 /* LFHGFBottomToolsView.h */,
+				9D7447D91EA4C49200C767A4 /* LFHGFBottomToolsView.m */,
+				9D7447DB1EA4CF8C00C767A4 /* LFHGFHandleImageView.h */,
+				9D7447DC1EA4CF8C00C767A4 /* LFHGFHandleImageView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA5DE9F341FA8631588B17BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8DA86C35C393E09C90B9962 /* Pods-Graffiti.debug.xcconfig */,
+				3ABA430BCC55239167420A37 /* Pods-Graffiti.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D496F4A1EA37BDC00183A6B /* Graffiti */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D496F781EA37BDD00183A6B /* Build configuration list for PBXNativeTarget "Graffiti" */;
+			buildPhases = (
+				E17AF9E85A0165252C37C210 /* [CP] Check Pods Manifest.lock */,
+				9D496F471EA37BDC00183A6B /* Sources */,
+				9D496F481EA37BDC00183A6B /* Frameworks */,
+				9D496F491EA37BDC00183A6B /* Resources */,
+				849D5FDF2E1B834EFA962B6A /* [CP] Embed Pods Frameworks */,
+				51D351F6C2A9861F18993B64 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Graffiti;
+			productName = Graffiti;
+			productReference = 9D496F4B1EA37BDC00183A6B /* Graffiti.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9D496F631EA37BDD00183A6B /* GraffitiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D496F7B1EA37BDD00183A6B /* Build configuration list for PBXNativeTarget "GraffitiTests" */;
+			buildPhases = (
+				9D496F601EA37BDD00183A6B /* Sources */,
+				9D496F611EA37BDD00183A6B /* Frameworks */,
+				9D496F621EA37BDD00183A6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D496F661EA37BDD00183A6B /* PBXTargetDependency */,
+			);
+			name = GraffitiTests;
+			productName = GraffitiTests;
+			productReference = 9D496F641EA37BDD00183A6B /* GraffitiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9D496F6E1EA37BDD00183A6B /* GraffitiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D496F7E1EA37BDD00183A6B /* Build configuration list for PBXNativeTarget "GraffitiUITests" */;
+			buildPhases = (
+				9D496F6B1EA37BDD00183A6B /* Sources */,
+				9D496F6C1EA37BDD00183A6B /* Frameworks */,
+				9D496F6D1EA37BDD00183A6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D496F711EA37BDD00183A6B /* PBXTargetDependency */,
+			);
+			name = GraffitiUITests;
+			productName = GraffitiUITests;
+			productReference = 9D496F6F1EA37BDD00183A6B /* GraffitiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D496F431EA37BDC00183A6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LFH;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = LiFuheng;
+				TargetAttributes = {
+					9D496F4A1EA37BDC00183A6B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = B97JB7KURN;
+						ProvisioningStyle = Automatic;
+					};
+					9D496F631EA37BDD00183A6B = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9D496F4A1EA37BDC00183A6B;
+					};
+					9D496F6E1EA37BDD00183A6B = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9D496F4A1EA37BDC00183A6B;
+					};
+				};
+			};
+			buildConfigurationList = 9D496F461EA37BDC00183A6B /* Build configuration list for PBXProject "Graffiti" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D496F421EA37BDC00183A6B;
+			productRefGroup = 9D496F4C1EA37BDC00183A6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D496F4A1EA37BDC00183A6B /* Graffiti */,
+				9D496F631EA37BDD00183A6B /* GraffitiTests */,
+				9D496F6E1EA37BDD00183A6B /* GraffitiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D496F491EA37BDC00183A6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D496F5E1EA37BDD00183A6B /* LaunchScreen.storyboard in Resources */,
+				9D496F5B1EA37BDD00183A6B /* Assets.xcassets in Resources */,
+				9D7447B01EA4A8EE00C767A4 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D496F621EA37BDD00183A6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D496F6D1EA37BDD00183A6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51D351F6C2A9861F18993B64 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Graffiti/Pods-Graffiti-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		849D5FDF2E1B834EFA962B6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Graffiti/Pods-Graffiti-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E17AF9E85A0165252C37C210 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D496F471EA37BDC00183A6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D7447CE1EA4BD8B00C767A4 /* LFHPhotoEditViewController.m in Sources */,
+				9D7447CC1EA4BD8B00C767A4 /* LFHGraffitiBoardViewController.m in Sources */,
+				9D496F531EA37BDC00183A6B /* AppDelegate.m in Sources */,
+				9D0713A21EA6018D009D87CB /* LFHBottomToolBtnItem.m in Sources */,
+				9D496F501EA37BDC00183A6B /* main.m in Sources */,
+				9D7447C91EA4BD8B00C767A4 /* LFHImagePickerViewController.m in Sources */,
+				9D7447CD1EA4BD8B00C767A4 /* LFHMainViewController.m in Sources */,
+				9D7447DD1EA4CF8C00C767A4 /* LFHGFHandleImageView.m in Sources */,
+				9D07139F1EA5E732009D87CB /* LFHToolDrawViewToImage.m in Sources */,
+				9D7447CA1EA4BD8B00C767A4 /* LFHNavViewController.m in Sources */,
+				9D7447DA1EA4C49200C767A4 /* LFHGFBottomToolsView.m in Sources */,
+				9D7447D71EA4C47E00C767A4 /* LFHGFDrawingBoardView.m in Sources */,
+				9D7447CB1EA4BD8B00C767A4 /* LFHBezierPath.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D496F601EA37BDD00183A6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D496F691EA37BDD00183A6B /* GraffitiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D496F6B1EA37BDD00183A6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D496F741EA37BDD00183A6B /* GraffitiUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D496F661EA37BDD00183A6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D496F4A1EA37BDC00183A6B /* Graffiti */;
+			targetProxy = 9D496F651EA37BDD00183A6B /* PBXContainerItemProxy */;
+		};
+		9D496F711EA37BDD00183A6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D496F4A1EA37BDC00183A6B /* Graffiti */;
+			targetProxy = 9D496F701EA37BDD00183A6B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9D496F5C1EA37BDD00183A6B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D496F5D1EA37BDD00183A6B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D496F761EA37BDD00183A6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9D496F771EA37BDD00183A6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D496F791EA37BDD00183A6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8DA86C35C393E09C90B9962 /* Pods-Graffiti.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = B97JB7KURN;
+				INFOPLIST_FILE = Graffiti/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifuheng.Graffiti;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		9D496F7A1EA37BDD00183A6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ABA430BCC55239167420A37 /* Pods-Graffiti.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = B97JB7KURN;
+				INFOPLIST_FILE = Graffiti/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifuheng.Graffiti;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		9D496F7C1EA37BDD00183A6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GraffitiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifuheng.GraffitiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Graffiti.app/Graffiti";
+			};
+			name = Debug;
+		};
+		9D496F7D1EA37BDD00183A6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GraffitiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifuheng.GraffitiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Graffiti.app/Graffiti";
+			};
+			name = Release;
+		};
+		9D496F7F1EA37BDD00183A6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GraffitiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifuheng.GraffitiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Graffiti;
+			};
+			name = Debug;
+		};
+		9D496F801EA37BDD00183A6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GraffitiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifuheng.GraffitiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Graffiti;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D496F461EA37BDC00183A6B /* Build configuration list for PBXProject "Graffiti" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D496F761EA37BDD00183A6B /* Debug */,
+				9D496F771EA37BDD00183A6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D496F781EA37BDD00183A6B /* Build configuration list for PBXNativeTarget "Graffiti" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D496F791EA37BDD00183A6B /* Debug */,
+				9D496F7A1EA37BDD00183A6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D496F7B1EA37BDD00183A6B /* Build configuration list for PBXNativeTarget "GraffitiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D496F7C1EA37BDD00183A6B /* Debug */,
+				9D496F7D1EA37BDD00183A6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D496F7E1EA37BDD00183A6B /* Build configuration list for PBXNativeTarget "GraffitiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D496F7F1EA37BDD00183A6B /* Debug */,
+				9D496F801EA37BDD00183A6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D496F431EA37BDC00183A6B /* Project object */;
+}
