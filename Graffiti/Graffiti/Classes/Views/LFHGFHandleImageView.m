@@ -7,24 +7,24 @@
 //
 
 #import "LFHGFHandleImageView.h"
-#import "LFHToolDrawViewToImage.h"
+#import "LFHCustomTool.h"
 #import <Masonry.h>
 
 @interface LFHGFHandleImageView () <UIGestureRecognizerDelegate>
 
-/* Top Tools View */
+/* 头部工具栏 */
 @property (nonatomic, weak) UIView *topToolsView;
 
-/* Content View */
+/* 内容视图 */
 @property (nonatomic, weak) UIView *contentView;
 
-/* Image View */
+/* 图片视图 */
 @property (nonatomic, weak) UIImageView *imageView;
 
-/* Cancel Button */
+/* 取消按钮 */
 @property (nonatomic, weak) UIButton *cancelBtn;
 
-/* Finished Button */
+/* 完成按钮 */
 @property (nonatomic, weak) UIButton *finishedBtn;
 
 @end
@@ -34,23 +34,28 @@
 #pragma mark - getter/ setter
 - (void)setImage:(UIImage *)image {
     _image = image;
+    // 设置 self.imageView 的图片显示模式
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.image = image;
 }
 
+#pragma mark - View
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setupUI];
+        [self setupSubviews];
         [self setupGesture];
     }
     return self;
 }
 
+/**
+ 布局子控件
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
-    /********** 添加约束 **********/
+    // 添加约束
     __weak __typeof(self)weakSelf = self;
     [self.topToolsView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(weakSelf);
@@ -71,23 +76,20 @@
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.bottom.right.equalTo(weakSelf.contentView);
     }];
-    
-    /******************************/
 }
 
 #pragma mark - setup
-
 /**
- 初始化 UI
+ 添加子控件
  */
-- (void)setupUI {
-    /* Top Tools View */
+- (void)setupSubviews {
+    // 头部工具栏
     UIView *topToolsView = [[UIView alloc] init];
     topToolsView.backgroundColor = [UIColor darkGrayColor];
     self.topToolsView = topToolsView;
     [self addSubview:topToolsView];
     
-    /* Cancel Button */
+    // 取消按钮
     UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     cancelBtn.tintColor = [UIColor blackColor];
     [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
@@ -95,7 +97,7 @@
     [topToolsView addSubview:cancelBtn];
     [cancelBtn addTarget:self action:@selector(cancelBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    /* Finished Button */
+    // 完成按钮
     UIButton *finishedBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     finishedBtn.tintColor = [UIColor greenColor];
     [finishedBtn setTitle:@"完成" forState:UIControlStateNormal];
@@ -103,18 +105,17 @@
     [topToolsView addSubview:finishedBtn];
     [finishedBtn addTarget:self action:@selector(finishedBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    /* Content View */
+    // 内容视图
     UIView *contentView = [[UIView alloc] init];
     contentView.backgroundColor = [UIColor clearColor];
     self.contentView = contentView;
     [self addSubview:contentView];
     
-    /* Image View */
+    // 图片视图
     UIImageView *imageView = [[UIImageView alloc] init];
     self.imageView = imageView;
     [contentView addSubview:imageView];
 }
-
 
 /**
  添加手势
@@ -124,21 +125,27 @@
     self.imageView.userInteractionEnabled = YES;
     
     /********** 添加手势 **********/
-    
-    // 拖拽
+    /* 拖拽 */
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     [self.imageView addGestureRecognizer:pan];
     pan.delegate = self;
-    // 旋转
+    
+    /* 旋转 */
     UIRotationGestureRecognizer *rotation = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotation:)];
     [self.imageView addGestureRecognizer:rotation];
     rotation.delegate = self;
-    // 捏合
+    
+    /* 捏合 */
     UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
     [self.imageView addGestureRecognizer:pinch];
     pinch.delegate = self;
+    /******************************/
 }
 
+#pragma mark - Gesture Event
+/**
+ 拖拽
+ */
 - (void)pan:(UIPanGestureRecognizer *)pan {
     // 设置transform
     CGPoint transP = [pan translationInView:pan.view];
@@ -147,6 +154,9 @@
     [pan setTranslation:CGPointZero inView:pan.view];
 }
 
+/**
+ 旋转
+ */
 - (void)rotation:(UIRotationGestureRecognizer *)rotation {
     // 设置transform
     rotation.view.transform = CGAffineTransformRotate(rotation.view.transform, rotation.rotation);
@@ -154,6 +164,9 @@
     [rotation setRotation:0];
 }
 
+/**
+ 缩放
+ */
 - (void)pinch:(UIPinchGestureRecognizer *)pinch {
     // 设置transform
     pinch.view.transform = CGAffineTransformScale(pinch.view.transform, pinch.scale, pinch.scale);
@@ -162,21 +175,30 @@
 }
 
 #pragma mark - Button Click
+
+/**
+ 点击取消按钮后调用
+ */
 - (void)cancelBtnClick:(UIButton *)sender {
     // 通知代理
     if ([self.delegate respondsToSelector:@selector(handleImageView:clickCancelBtn:)]) {
         [self.delegate handleImageView:self clickCancelBtn:sender];
     }
+    // 从父控件中移除
     [self removeFromSuperview];
 }
 
+/**
+ 点击完成按钮后调用
+ */
 - (void)finishedBtnClick:(UIButton *)sender {
     // 将 Content View 绘制成 Image
-    UIImage *newImage = [[LFHToolDrawViewToImage shareToolDrawViewToImage] createImageWithView:self.contentView];
+    UIImage *image = [LFHCustomTool createImageWithView:self.contentView];
     // 通知代理
     if ([self.delegate respondsToSelector:@selector(handleImageView:clickFinishedBtnWithNewImage:)]) {
-        [self.delegate handleImageView:self clickFinishedBtnWithNewImage:newImage];
+        [self.delegate handleImageView:self clickFinishedBtnWithNewImage:image];
     }
+    // 从父控件中移除
     [self removeFromSuperview];
 }
 

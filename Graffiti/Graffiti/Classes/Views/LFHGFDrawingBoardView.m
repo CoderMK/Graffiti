@@ -8,7 +8,8 @@
 
 #import "LFHGFDrawingBoardView.h"
 #import "LFHBezierPath.h"
-#import "LFHToolDrawViewToImage.h"
+#import "LFHCustomTool.h"
+#import "UIColor+LFHColor.h"
 #import <MBProgressHUD.h>
 
 @interface LFHGFDrawingBoardView ()
@@ -54,9 +55,22 @@
     [self setNeedsDisplay];
 }
 
-#pragma mark - 绘制事件
+#pragma mark - UIView
+- (void)drawRect:(CGRect)rect {
+    for (LFHBezierPath *path in self.pathArray) {
+        if ([path isKindOfClass:[UIImage class]]) {
+            UIImage *image = (UIImage *)path;
+            [image drawInRect:rect];
+        } else {
+            [path.color set];
+            [path stroke];
+        }
+    }
+}
+
+#pragma mark - Drawing Event
 /**
- 清屏
+ 清除所有路径
  */
 - (void)clearDrawing {
     if (self.pathArray != nil) {
@@ -67,7 +81,7 @@
 }
 
 /**
- 撤销
+ 撤销上一次绘制的路径
  */
 - (void)backwardPath {
     if (self.pathArray.count > 0) {
@@ -80,7 +94,7 @@
 }
 
 /**
- 前进
+ 重绘上一次撤销的路径
  */
 - (void)forwardPath {
     if (self.delPathArray.count > 0) {
@@ -95,19 +109,23 @@
  */
 - (void)saveDrawingAsPicture {
     if (self.pathArray != nil) {
-        // 将 self 绘制成 Image
-        UIImage *newImage = [[LFHToolDrawViewToImage shareToolDrawViewToImage] createImageWithView:self];
+        // 将 self 绘制成 UIImage
+        UIImage *image = [LFHCustomTool createImageWithView:self];
         // 将图片保存到系统相册
-        UIImageWriteToSavedPhotosAlbum(newImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
     }
 }
 
+/**
+ 分享图片
+
+ @return 要分享出去的图片
+ */
 - (UIImage *)shareImage {
-    // 将 self 绘制成 Image
-    UIImage *image = [[LFHToolDrawViewToImage shareToolDrawViewToImage] createImageWithView:self];
+    // 将 self 绘制成 UIImage
+    UIImage *image = [LFHCustomTool createImageWithView:self];
     return image;
 }
-
 
 /**
  保存图片到系统相册回调函数
@@ -117,10 +135,13 @@
  @param contextInfo contextInfo
  */
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    
+    // 弹窗提示保存成功信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
     hud.mode = MBProgressHUDModeText;
     hud.label.text = @"保存成功";
     
+    // 一秒后隐藏
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUDForView:self animated:YES];
     });
@@ -129,14 +150,24 @@
 /**
  画笔
  */
-- (void)drawWithPen {
-    // 添加手势
-    UIGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-    [self addGestureRecognizer:pan];
+- (void)drawWithPenColor:(NSString *)color Width:(CGFloat)width
+{
+    // 设置默认颜色
+    if (color == nil) {
+        color = @"000000";
+    }
+    // 设置默认宽度
+    if (width == 0) {
+        width = 10;
+    }
+    self.pathColor = [UIColor colorWithHexString:color];
+    self.pathWidth = width;
     
-    // 设置默认线宽和颜色
-    self.pathWidth = 1;
-    self.pathColor = [UIColor blackColor];
+    // 添加拖拽手势
+    if (self.gestureRecognizers == nil) {
+        UIGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+        [self addGestureRecognizer:pan];
+    } 
 }
 
 /**
@@ -154,20 +185,23 @@
 }
 
 /**
- 设置线宽
+ 设置路径宽度
  */
 - (void)changePathWidth:(CGFloat)pathWidth {
     self.pathWidth = pathWidth;
 }
 
 /**
- 设置线颜色
+ 设置路径颜色
  */
-- (void)changePathColor:(UIColor *)color {
-    self.pathColor = color;
+- (void)changePathColor:(NSString *)color {
+    self.pathColor = [UIColor colorWithHexString:color];
 }
 
-#pragma mark - 手势
+#pragma mark - Gesture Event
+/**
+ 拖拽手势
+ */
 - (void)pan:(UIPanGestureRecognizer *)pan {
     // 当手指点开始移动时，删除 delPathArray数组中的全部 path
     [self.delPathArray removeAllObjects];
@@ -193,21 +227,6 @@
         [self.path addLineToPoint:curPoint];
         // 重绘
         [self setNeedsDisplay];
-    }
-}
-
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-    for (LFHBezierPath *path in self.pathArray) {
-        if ([path isKindOfClass:[UIImage class]]) {
-            UIImage *image = (UIImage *)path;
-            [image drawInRect:rect];
-        } else {
-            [path.color set];
-            [path stroke];
-        }
     }
 }
 

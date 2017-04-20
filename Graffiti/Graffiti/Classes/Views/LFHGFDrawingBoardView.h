@@ -4,10 +4,18 @@
 //
 //  Created by lifuheng on 2017/4/17.
 //  Copyright © 2017年 LiFuheng. All rights reserved.
-//
+//  涂鸦画板视图
 
 #import <UIKit/UIKit.h>
 
+
+/**
+ 保存方式
+
+ - DrawBoardViewSaveTypeOnlySave: 仅保存
+ - DrawBoardViewSaveTypeOnlyShare: 仅分享
+ - DrawBoardViewSaveTypeSaveAndShare: 保存后分享
+ */
 typedef NS_ENUM(NSInteger, DrawBoardViewSaveType) {
     DrawBoardViewSaveTypeOnlySave = 0,
     DrawBoardViewSaveTypeOnlyShare,
@@ -16,21 +24,21 @@ typedef NS_ENUM(NSInteger, DrawBoardViewSaveType) {
 
 @interface LFHGFDrawingBoardView : UIView
 
-/** 操作后的图片 */
+/** handleImageView视图中操作后的图片 */
 @property (nonatomic, strong) UIImage *image;
 
 /**
- 清屏
+ 清除所有路径
  */
 - (void)clearDrawing;
 
 /**
- 撤销
+ 撤销上一次绘制的路径
  */
 - (void)backwardPath;
 
 /**
- 前进
+ 重绘上一次撤销的路径
  */
 - (void)forwardPath;
 
@@ -49,7 +57,7 @@ typedef NS_ENUM(NSInteger, DrawBoardViewSaveType) {
 /**
  画笔
  */
-- (void)drawWithPen;
+- (void)drawWithPenColor:(NSString *)color Width:(CGFloat)width;
 
 /**
  文字
@@ -62,17 +70,17 @@ typedef NS_ENUM(NSInteger, DrawBoardViewSaveType) {
 - (void)drawWithEraser;
 
 /**
- 改变线宽
+ 设置路径宽度
 
  @param pathWidth 宽度值
  */
 - (void)changePathWidth:(CGFloat)pathWidth;
 
 /**
- 改变颜色
+ 设置路径颜色
 
- @param color 颜色
+ @param color 十六进制颜色
  */
-- (void)changePathColor:(UIColor *)color;
+- (void)changePathColor:(NSString *)color;
 
 @end

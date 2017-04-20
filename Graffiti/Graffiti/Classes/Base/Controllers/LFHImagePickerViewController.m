@@ -14,6 +14,7 @@
 
 @implementation LFHImagePickerViewController
 
+#pragma mark - View Controller
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -25,11 +26,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Setup
 - (void)setupNavigationBar {
     [self.navigationBar setTintColor:[UIColor blackColor]];
 }
 
-#pragma mark -
+#pragma mark - 设置导航条
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }

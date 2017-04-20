@@ -6,11 +6,15 @@
 //  Copyright © 2017年 LiFuheng. All rights reserved.
 //
 
+// 如要测试改为 1
+#define TEST 0
+
 #define USHARE_APPKEY @"58f1ee9f677baa0a970012d3"
 #define WECHAT_APPID @"wx0421a952bffb1d45"
 #define WECHAT_APPSECRET @"fa46f1939d8ef2c66ccd545f75a6269c"
 
 #import "AppDelegate.h"
+#import "LFHTestViewController.h"
 #import "LFHMainViewController.h"
 #import "LFHNavViewController.h"
 #import <UMSocialCore/UMSocialCore.h>
@@ -42,9 +46,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     // 选择窗口的根控制器
-    LFHMainViewController *rootVC = [[LFHMainViewController alloc] init];
-    LFHNavViewController *navVC = [[LFHNavViewController alloc] initWithRootViewController:rootVC];
-    self.window.rootViewController = navVC;
+    if (TEST) {
+        LFHTestViewController *rootVC = [[LFHTestViewController alloc] init];
+        rootVC.view.backgroundColor = [UIColor purpleColor];
+        self.window.rootViewController = rootVC;
+    } else {
+        LFHMainViewController *rootVC = [[LFHMainViewController alloc] init];
+        LFHNavViewController *navVC = [[LFHNavViewController alloc] initWithRootViewController:rootVC];
+        self.window.rootViewController = navVC;
+    }
     // 显示窗口
     [self.window makeKeyAndVisible];
     return YES;
@@ -91,7 +101,7 @@
     /*
      * 打开图片水印
      */
-    //[UMSocialGlobal shareInstance].isUsingWaterMark = YES;
+    [UMSocialGlobal shareInstance].isUsingWaterMark = YES;
     
     /*
      * 关闭强制验证https，可允许http图片分享，但需要在info.plist设置安全域名

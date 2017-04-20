@@ -4,16 +4,13 @@
 //
 //  Created by lifuheng on 2017/4/16.
 //  Copyright © 2017年 LiFuheng. All rights reserved.
-//
+//  图片编辑控制器
 
 #import "LFHPhotoEditViewController.h"
 
-@interface LFHPhotoEditViewController ()
-
-@end
-
 @implementation LFHPhotoEditViewController
 
+#pragma mark - View Controller
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -41,7 +38,7 @@
     // 保存/分享按钮
     UIBarButtonItem *saveOrShareBtn = [[UIBarButtonItem alloc] initWithTitle:@"保存/分享" style:UIBarButtonItemStylePlain target:self action:@selector(saveOrShareBtnClick)];
     
-    // 打包添加到 NavigationItem
+    // 将按钮打包添加到 NavigationItem
     NSArray *barButtonItemArray = @[saveOrShareBtn, resetBtn, forwardBtn, backwardBtn];
     self.navigationItem.rightBarButtonItems = barButtonItemArray;
 }
@@ -54,21 +51,36 @@
 }
 
 #pragma mark - Button Click
+
+/**
+ 点击撤销按钮后调用
+ */
 - (void)backwardBtnClick {
     
 }
+
+/**
+ 点击前进按钮后调用
+ */
 - (void)forwardBtnClick {
     
 }
 
+/**
+ 点击还原按钮后调用
+ */
 - (void)resetBtnClick {
     
 }
+
+/**
+ 点击保存/分享按钮后调用
+ */
 - (void)saveOrShareBtnClick {
     
 }
 
-#pragma mark -
+#pragma mark - 设置导航条
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }

@@ -60,6 +60,7 @@
     // 添加点击事件
     [graffityBtn addTarget:self action:@selector(graffityBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
+    /********** 暂时不开放此功能 **********
     // 添加图片编辑按钮
     UIButton *photoEditBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     photoEditBtn.backgroundColor = [UIColor greenColor];
@@ -73,26 +74,31 @@
     }];
     // 添加点击事件
     [photoEditBtn addTarget:self action:@selector(photoEditBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    ********************/
+    
 }
 
 #pragma mark - Button Click
+
+/**
+ 点击涂鸦画板按钮后调用
+ */
 - (void)graffityBtnClick {
     // 跳转到涂鸦画板
     LFHGraffitiBoardViewController *graffiitiBoardVC = [[LFHGraffitiBoardViewController alloc] init];
     [self.navigationController pushViewController:graffiitiBoardVC animated:YES];
 }
 
-- (void)photoEditBtnClick {
-    // 跳转到图片选择控制器(modal)
-    LFHImagePickerViewController *imagePickerVC = [[LFHImagePickerViewController alloc] init];
-    imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    imagePickerVC.delegate = self;
-    
-    [self presentViewController:imagePickerVC animated:YES completion:nil];
-}
+//- (void)photoEditBtnClick {
+//    // 跳转到图片选择控制器(modal)
+//    LFHImagePickerViewController *imagePickerVC = [[LFHImagePickerViewController alloc] init];
+//    imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//    imagePickerVC.delegate = self;
+//    
+//    [self presentViewController:imagePickerVC animated:YES completion:nil];
+//}
 
 #pragma mark - UIImagePickerControllerDelegate
-
 /**
  ImagePickerController 中点击图片后调用
 
@@ -111,7 +117,7 @@
     }];
 }
 
-#pragma mark -
+#pragma mark - 设置导航条
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }

@@ -14,10 +14,9 @@
 
 @implementation LFHNavViewController
 
+#pragma mark - System
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
     // 设置导航条背景颜色为透明色
     [self.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     // 去除导航条底部黑线
