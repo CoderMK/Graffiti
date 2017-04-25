@@ -4,7 +4,7 @@
 //
 //  Created by lifuheng on 2017/4/19.
 //  Copyright © 2017年 LiFuheng. All rights reserved.
-//
+//  颜色按钮
 
 #import "LFHColorBtn.h"
 
@@ -14,7 +14,6 @@
  创建按钮时就设置好按钮在正常状态和选中状态下的图片
 
  @param item 按钮模型
- @return 按钮对象
  */
 + (instancetype)colorBtnWithItem:(LFHColorBtnItem *)item {
     LFHColorBtn *btn = [LFHColorBtn buttonWithType:UIButtonTypeCustom];

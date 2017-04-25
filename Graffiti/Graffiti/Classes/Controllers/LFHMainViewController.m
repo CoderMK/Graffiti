@@ -4,7 +4,7 @@
 //
 //  Created by lifuheng on 2017/4/16.
 //  Copyright © 2017年 LiFuheng. All rights reserved.
-//
+//  主页控制器
 
 #import "LFHMainViewController.h"
 #import "LFHGraffitiBoardViewController.h"
@@ -22,7 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    // 初始化导航条和 UI 布局
     [self setupNavigationBar];
     [self setupUI];
 }
@@ -79,7 +78,6 @@
 }
 
 #pragma mark - Button Click
-
 /**
  点击涂鸦画板按钮后调用
  */
@@ -101,9 +99,6 @@
 #pragma mark - UIImagePickerControllerDelegate
 /**
  ImagePickerController 中点击图片后调用
-
- @param picker ImagePickerController
- @param info 信息字典
  */
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     UIImage *image = info[UIImagePickerControllerOriginalImage];

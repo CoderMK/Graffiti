@@ -49,8 +49,6 @@ typedef NS_ENUM(NSInteger, DrawBoardViewSaveType) {
 
 /**
  分享图片
- 
- @return 要分享出去的图片
  */
 - (UIImage *)shareImage;
 
@@ -67,7 +65,7 @@ typedef NS_ENUM(NSInteger, DrawBoardViewSaveType) {
 /**
  橡皮
  */
-- (void)drawWithEraser;
+- (void)drawWithEraserWidth:(CGFloat)width;
 
 /**
  设置路径宽度

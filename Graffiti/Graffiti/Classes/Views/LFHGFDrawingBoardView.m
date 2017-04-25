@@ -4,7 +4,7 @@
 //
 //  Created by lifuheng on 2017/4/17.
 //  Copyright © 2017年 LiFuheng. All rights reserved.
-//
+//  涂鸦画板视图
 
 #import "LFHGFDrawingBoardView.h"
 #import "LFHBezierPath.h"
@@ -118,8 +118,6 @@
 
 /**
  分享图片
-
- @return 要分享出去的图片
  */
 - (UIImage *)shareImage {
     // 将 self 绘制成 UIImage
@@ -129,10 +127,6 @@
 
 /**
  保存图片到系统相册回调函数
- 
- @param image 图片
- @param error 错误信息
- @param contextInfo contextInfo
  */
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     
@@ -163,8 +157,13 @@
     self.pathColor = [UIColor colorWithHexString:color];
     self.pathWidth = width;
     
-    // 添加拖拽手势
+    // 添加手势
     if (self.gestureRecognizers == nil) {
+        // 点击
+        UIGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        [self addGestureRecognizer:tap];
+        
+        // 拖拽
         UIGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
         [self addGestureRecognizer:pan];
     } 
@@ -180,8 +179,9 @@
 /**
  擦除内容
  */
-- (void)drawWithEraser {
+- (void)drawWithEraserWidth:(CGFloat)width {
     self.pathColor = [UIColor whiteColor];
+    self.pathWidth = width;
 }
 
 /**
@@ -200,16 +200,41 @@
 
 #pragma mark - Gesture Event
 /**
+ 点击手势
+ */
+- (void)tap:(UITapGestureRecognizer *)tap {
+    // 当手指点击时，删除 delPathArray 数组中的全部 path
+    [self.delPathArray removeAllObjects];
+    // 获取当前手势点
+    CGPoint curPoint = [tap locationInView:self];
+    // 创建路径
+    LFHBezierPath *path = [[LFHBezierPath alloc] init];
+    self.path = path;
+    // 设置路径宽度和颜色
+    path.lineWidth = self.pathWidth;
+    path.color = self.pathColor;
+    
+    // 设置起点
+    [path moveToPoint:curPoint];
+    // 设置终点
+    [path addLineToPoint:curPoint];
+    // 保存当前路径
+    [self.pathArray addObject:path];
+    // 重绘
+    [self setNeedsDisplay];
+}
+
+/**
  拖拽手势
  */
 - (void)pan:(UIPanGestureRecognizer *)pan {
-    // 当手指点开始移动时，删除 delPathArray数组中的全部 path
+    // 当手指点开始移动时，删除 delPathArray 数组中的全部 path
     [self.delPathArray removeAllObjects];
     // 获取当前手势点
     CGPoint curPoint = [pan locationInView:self];
     // 判断手势状态
     if (pan.state == UIGestureRecognizerStateBegan) { // 开始状态
-        // 创建路径,并赋值给成员属性self.path
+        // 创建路径,并赋值给成员属性 self.path
         LFHBezierPath *path = [[LFHBezierPath alloc] init];
         self.path = path;
         // 设置起点
@@ -218,8 +243,6 @@
         path.lineWidth = self.pathWidth;
         path.color = self.pathColor;
         
-        // 设置路径链接方式为圆角
-        path.lineJoinStyle = kCGLineJoinRound;
         // 保存当前路径
         [self.pathArray addObject:path];
     } else if (pan.state == UIGestureRecognizerStateChanged) { // 移动状态

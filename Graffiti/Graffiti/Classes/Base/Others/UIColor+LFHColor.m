@@ -4,7 +4,7 @@
 //
 //  Created by lifuheng on 2017/4/20.
 //  Copyright © 2017年 LiFuheng. All rights reserved.
-//
+//  可以用用十六进制颜色值创建 UIColor
 
 #import "UIColor+LFHColor.h"
 

@@ -92,8 +92,6 @@
 #pragma mark - Button Click
 /**
  颜色按钮点击
-
- @param sender 按钮
  */
 - (void)btnClick:(LFHColorBtn *)sender {
     // 设为选中状态

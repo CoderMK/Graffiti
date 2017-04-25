@@ -4,7 +4,7 @@
 //
 //  Created by lifuheng on 2017/4/19.
 //  Copyright © 2017年 LiFuheng. All rights reserved.
-//
+//  颜色按钮模型
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>

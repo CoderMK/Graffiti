@@ -4,7 +4,7 @@
 //
 //  Created by lifuheng on 2017/4/20.
 //  Copyright © 2017年 LiFuheng. All rights reserved.
-//
+//  自定义工具类
 
 #import "LFHCustomTool.h"
 
@@ -26,6 +26,9 @@
 //    return _instance;
 //}
 
+/**
+ 将 UIView 绘制成 UIImage
+ */
 + (UIImage *)createImageWithView:(UIView *)view {
     // 1.开启位图上下文
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0);
