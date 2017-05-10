@@ -21,4 +21,22 @@
  */
 + (UIImage *)createImageWithView:(UIView *)view;
 
+/**
+ 将 NSString 绘制成 UIImage
+
+ @param str 字符串
+ @param attrDict 富文本属性
+ @return 绘制后的图片
+ */
++ (UIImage *)createImageWithString:(NSString *)str attribute:(NSDictionary *)attrDict;
+
+/**
+ 根据文字尺寸创建合适尺寸的label
+
+ @param str 文本字符串
+ @param attrDict 富文本属性
+ @return 创建的 Label
+ */
++ (UILabel *)createLabelWithString:(NSString *)str attribute:(NSDictionary *)attrDict;
+
 @end

@@ -41,9 +41,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.alpha = 0.8;
+        [self setup];
         [self setupSubviews];
-        // 添加监听
+        // 添加颜色按钮点击监听
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(colorBtnClickUsingNotifacation:) name:@"ColorBtnClicked" object:nil];
     }
     return self;
@@ -71,6 +71,14 @@
 }
 
 #pragma mark - Setup
+/**
+ 初始化设置
+ */
+- (void)setup {
+    self.alpha = 0.8;
+    self.backgroundColor = [UIColor grayColor];
+}
+
 /**
  添加子控件
  */

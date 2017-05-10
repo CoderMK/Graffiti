@@ -12,7 +12,6 @@
 
 @protocol LFHBottomToolsViewDelegate <NSObject>
 
-@required
 /**
  点击画笔按钮后调用
  */
@@ -24,14 +23,29 @@
 - (void)bottomToolsView:(LFHBottomToolsView *)view clickEraserBtn:(UIButton *)sender;
 
 /**
+ 点击表情按钮后调用
+ */
+- (void)bottomToolsView:(LFHBottomToolsView *)view clickExpressionBtn:(UIButton *)sender;
+
+/**
  点击字体按钮后调用
  */
 - (void)bottomToolsView:(LFHBottomToolsView *)view clickTextBtn:(UIButton *)sender;
+
+/**
+ 点击帮助按钮后调用
+ */
+- (void)bottomToolsView:(LFHBottomToolsView *)view clickHelpBtn:(UIButton *)sender;
 @end
 
 @interface LFHBottomToolsView : UIView
 
 /* 代理属性 */
 @property (nonatomic, assign) id <LFHBottomToolsViewDelegate> delegate;
+
+/**
+ 工厂方法创建实例对象
+ */
++ (instancetype)bottomToolsView;
 
 @end

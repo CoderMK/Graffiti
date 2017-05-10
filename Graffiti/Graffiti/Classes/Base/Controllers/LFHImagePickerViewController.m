@@ -8,21 +8,12 @@
 
 #import "LFHImagePickerViewController.h"
 
-@interface LFHImagePickerViewController ()
-
-@end
-
 @implementation LFHImagePickerViewController
 
 #pragma mark - View Controller
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNavigationBar];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Setup

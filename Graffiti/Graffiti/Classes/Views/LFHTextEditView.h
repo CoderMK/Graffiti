@@ -21,7 +21,6 @@
  */
 - (void)textEditView:(LFHTextEditView *)view clickFinishBtn:(UIButton *)btn Text:(NSString *)text;
 
-
 @end
 
 
@@ -29,5 +28,7 @@
 
 /* 代理属性 */
 @property (nonatomic, weak) id <LFHTextEditViewDelegate> delegate;
+
++ (instancetype)textEditView;
 
 @end

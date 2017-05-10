@@ -8,23 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-
-/**
- 保存方式
-
- - DrawBoardViewSaveTypeOnlySave: 仅保存
- - DrawBoardViewSaveTypeOnlyShare: 仅分享
- - DrawBoardViewSaveTypeSaveAndShare: 保存后分享
- */
-typedef NS_ENUM(NSInteger, DrawBoardViewSaveType) {
-    DrawBoardViewSaveTypeOnlySave = 0,
-    DrawBoardViewSaveTypeOnlyShare,
-    DrawBoardViewSaveTypeSaveAndShare
-} NS_ENUM_AVAILABLE_IOS(8_0);
-
 @interface LFHGFDrawingBoardView : UIView
 
-/** handleImageView视图中操作后的图片 */
+/* 要绘制的图片 */
 @property (nonatomic, strong) UIImage *image;
 
 /**
@@ -56,11 +42,6 @@ typedef NS_ENUM(NSInteger, DrawBoardViewSaveType) {
  画笔
  */
 - (void)drawWithPenColor:(NSString *)color Width:(CGFloat)width;
-
-/**
- 文字
- */
-- (void)drawWithFont;
 
 /**
  橡皮

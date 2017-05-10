@@ -23,7 +23,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.alpha = 0.8;
+        [self setup];
         [self setupSubviews];
     }
     return self;
@@ -44,6 +44,14 @@
 }
 
 #pragma mark - Setup
+/**
+ 初始化设置
+ */
+- (void)setup {
+    self.alpha = 0.8;
+    self.backgroundColor = [UIColor grayColor];
+}
+
 /**
  添加子控件
  */

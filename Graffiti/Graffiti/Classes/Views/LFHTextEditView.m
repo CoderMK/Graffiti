@@ -4,32 +4,36 @@
 //
 //  Created by lifuheng on 2017/4/25.
 //  Copyright © 2017年 LiFuheng. All rights reserved.
-//
+//  文字编辑视图
 
 #import "LFHTextEditView.h"
 
-@interface LFHTextEditView ()
+@interface LFHTextEditView () <UITextViewDelegate>
 
-/**
- 文本编辑框
- */
+/* 文本编辑框 */
 @property (weak, nonatomic) IBOutlet UITextView *textEditView;
 
 @end
 
 @implementation LFHTextEditView
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    [self setup];
-}
-
 #pragma mark - Setup
++ (instancetype)textEditView {
+    LFHTextEditView *textEditView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];
+    [textEditView setup];
+    return textEditView;
+}
 /**
  初始化设置
  */
 - (void)setup {
     [self.textEditView becomeFirstResponder];
+    self.textEditView.delegate = self;
+}
+
+#pragma mark - UITextViewDelegate
+- (void)textViewDidChange:(UITextView *)textView {
+    
 }
 
 #pragma mark - Button Click

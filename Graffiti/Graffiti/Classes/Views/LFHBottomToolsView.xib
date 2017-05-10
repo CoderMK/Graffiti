@@ -16,65 +16,77 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oB8-iz-mw5" userLabel="Pen">
-                    <rect key="frame" x="40" y="7" width="35" height="35"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="35" id="U0w-5K-XzW"/>
-                        <constraint firstAttribute="height" constant="35" id="V76-Dq-4jE"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="0.0" width="75" height="49"/>
                     <state key="normal" image="pen"/>
-                    <state key="selected" image="selectpen"/>
                     <connections>
                         <action selector="penBtnClick:" destination="pzY-gX-VYN" eventType="touchUpInside" id="Qpp-Xs-ucj"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylW-cr-svl" userLabel="Text">
-                    <rect key="frame" x="300" y="7" width="35" height="35"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="35" id="2Ho-bt-0To"/>
-                        <constraint firstAttribute="height" constant="35" id="hjr-jf-FCc"/>
-                    </constraints>
-                    <state key="normal" image="text"/>
-                    <state key="selected" image="selecttext"/>
-                    <connections>
-                        <action selector="textBtnClick:" destination="pzY-gX-VYN" eventType="touchUpInside" id="Rc7-nn-47g"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JR-7h-Bwf" userLabel="Eraser">
-                    <rect key="frame" x="170" y="7" width="35" height="35"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="35" id="jkm-2N-Jxn"/>
-                        <constraint firstAttribute="height" constant="35" id="lFC-fd-Gin"/>
-                    </constraints>
+                    <rect key="frame" x="74.5" y="0.0" width="75" height="49"/>
                     <state key="normal" image="eraser"/>
-                    <state key="selected" image="selecteraser"/>
                     <connections>
                         <action selector="eraserBtnClick:" destination="pzY-gX-VYN" eventType="touchUpInside" id="97r-mU-6Bq"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sL-tJ-psE" userLabel="Expression">
+                    <rect key="frame" x="149.5" y="0.0" width="75.5" height="49"/>
+                    <state key="normal" image="expression"/>
+                    <connections>
+                        <action selector="expressionBtnClick:" destination="pzY-gX-VYN" eventType="touchUpInside" id="TQQ-8r-jXM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylW-cr-svl" userLabel="Text">
+                    <rect key="frame" x="225" y="0.0" width="75" height="49"/>
+                    <state key="normal" image="text"/>
+                    <connections>
+                        <action selector="textBtnClick:" destination="pzY-gX-VYN" eventType="touchUpInside" id="Rc7-nn-47g"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcV-va-aE1" userLabel="Help">
+                    <rect key="frame" x="300" y="0.0" width="75" height="49"/>
+                    <state key="normal" image="help"/>
+                    <connections>
+                        <action selector="helpBtnClick:" destination="pzY-gX-VYN" eventType="touchUpInside" id="Oob-dR-D8K"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
-                <constraint firstItem="oB8-iz-mw5" firstAttribute="leading" secondItem="pzY-gX-VYN" secondAttribute="leading" constant="40" id="7WS-ew-fve"/>
-                <constraint firstItem="oB8-iz-mw5" firstAttribute="centerY" secondItem="pzY-gX-VYN" secondAttribute="centerY" id="B5y-Mf-AMq"/>
-                <constraint firstItem="8JR-7h-Bwf" firstAttribute="centerY" secondItem="pzY-gX-VYN" secondAttribute="centerY" id="CAp-6l-pi9"/>
-                <constraint firstItem="ylW-cr-svl" firstAttribute="centerY" secondItem="pzY-gX-VYN" secondAttribute="centerY" id="Hrl-56-nsr"/>
-                <constraint firstAttribute="trailing" secondItem="ylW-cr-svl" secondAttribute="trailing" constant="40" id="f43-az-b0b"/>
-                <constraint firstItem="8JR-7h-Bwf" firstAttribute="centerX" secondItem="pzY-gX-VYN" secondAttribute="centerX" id="kgI-F3-daM"/>
+                <constraint firstItem="0sL-tJ-psE" firstAttribute="leading" secondItem="8JR-7h-Bwf" secondAttribute="trailing" id="1VS-oc-3kL"/>
+                <constraint firstItem="ylW-cr-svl" firstAttribute="leading" secondItem="0sL-tJ-psE" secondAttribute="trailing" id="5DA-mh-5E1"/>
+                <constraint firstItem="lcV-va-aE1" firstAttribute="leading" secondItem="ylW-cr-svl" secondAttribute="trailing" id="5q6-lu-CHv"/>
+                <constraint firstItem="8JR-7h-Bwf" firstAttribute="width" secondItem="oB8-iz-mw5" secondAttribute="width" id="8Ib-Lq-zf4"/>
+                <constraint firstItem="lcV-va-aE1" firstAttribute="top" secondItem="pzY-gX-VYN" secondAttribute="top" id="9OQ-od-kGu"/>
+                <constraint firstAttribute="bottom" secondItem="oB8-iz-mw5" secondAttribute="bottom" id="EkR-fW-nj2"/>
+                <constraint firstAttribute="trailing" secondItem="lcV-va-aE1" secondAttribute="trailing" id="GtC-nq-xhE"/>
+                <constraint firstItem="0sL-tJ-psE" firstAttribute="top" secondItem="pzY-gX-VYN" secondAttribute="top" id="Gwd-uf-aKi"/>
+                <constraint firstItem="0sL-tJ-psE" firstAttribute="width" secondItem="8JR-7h-Bwf" secondAttribute="width" id="HJB-og-vrm"/>
+                <constraint firstAttribute="bottom" secondItem="ylW-cr-svl" secondAttribute="bottom" id="PZg-r2-XZn"/>
+                <constraint firstItem="ylW-cr-svl" firstAttribute="width" secondItem="0sL-tJ-psE" secondAttribute="width" id="Pgu-vA-im4"/>
+                <constraint firstAttribute="bottom" secondItem="0sL-tJ-psE" secondAttribute="bottom" id="TeI-2Q-45y"/>
+                <constraint firstItem="8JR-7h-Bwf" firstAttribute="leading" secondItem="oB8-iz-mw5" secondAttribute="trailing" id="U8V-rr-iXG"/>
+                <constraint firstAttribute="bottom" secondItem="8JR-7h-Bwf" secondAttribute="bottom" id="ZMU-ay-TQO"/>
+                <constraint firstItem="ylW-cr-svl" firstAttribute="top" secondItem="pzY-gX-VYN" secondAttribute="top" id="j8N-vO-Mr4"/>
+                <constraint firstItem="lcV-va-aE1" firstAttribute="width" secondItem="ylW-cr-svl" secondAttribute="width" id="lyJ-DI-uLr"/>
+                <constraint firstItem="8JR-7h-Bwf" firstAttribute="top" secondItem="pzY-gX-VYN" secondAttribute="top" id="qc0-hg-PMn"/>
+                <constraint firstItem="oB8-iz-mw5" firstAttribute="leading" secondItem="pzY-gX-VYN" secondAttribute="leading" id="rdL-Il-FyQ"/>
+                <constraint firstItem="oB8-iz-mw5" firstAttribute="top" secondItem="pzY-gX-VYN" secondAttribute="top" id="vBn-oB-osf"/>
+                <constraint firstAttribute="bottom" secondItem="lcV-va-aE1" secondAttribute="bottom" id="x6P-Hj-WaA"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="penBtn" destination="oB8-iz-mw5" id="Tlu-sP-Xnk"/>
+                <outlet property="penBtn" destination="oB8-iz-mw5" id="Sl2-cw-299"/>
             </connections>
-            <point key="canvasLocation" x="-50.5" y="-866"/>
+            <point key="canvasLocation" x="-50.5" y="-866.5"/>
         </view>
     </objects>
     <resources>
-        <image name="eraser" width="49" height="49"/>
-        <image name="pen" width="49" height="49"/>
-        <image name="selecteraser" width="49" height="49"/>
-        <image name="selectpen" width="49" height="49"/>
-        <image name="selecttext" width="49" height="49"/>
+        <image name="eraser" width="61" height="61"/>
+        <image name="expression" width="117" height="103"/>
+        <image name="help" width="34" height="49"/>
+        <image name="pen" width="61" height="61"/>
         <image name="text" width="49" height="49"/>
     </resources>
 </document>

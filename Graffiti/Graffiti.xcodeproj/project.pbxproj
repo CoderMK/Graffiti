@@ -15,8 +15,6 @@
 		9D3BB0FF1EA77FE40085FAC8 /* LFHTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3BB0FE1EA77FE40085FAC8 /* LFHTestViewController.m */; };
 		9D46D8081EADE5C9008D473A /* LFHTextEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D46D8071EADE5C9008D473A /* LFHTextEditView.xib */; };
 		9D46D80B1EAF36F6008D473A /* LFHTextEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D46D80A1EAF36F6008D473A /* LFHTextEditView.m */; };
-		9D46D80D1EAF4E41008D473A /* LFHHandleImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D46D80C1EAF4E41008D473A /* LFHHandleImageView.xib */; };
-		9D46D8101EAF4FE7008D473A /* LFHHandleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D46D80F1EAF4FE7008D473A /* LFHHandleImageView.m */; };
 		9D46D8141EAF5FD3008D473A /* LFHBottomToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D46D8131EAF5FD3008D473A /* LFHBottomToolsView.xib */; };
 		9D46D8171EAF64BF008D473A /* LFHBottomToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D46D8161EAF64BF008D473A /* LFHBottomToolsView.m */; };
 		9D496F501EA37BDC00183A6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D496F4F1EA37BDC00183A6B /* main.m */; };
@@ -25,19 +23,24 @@
 		9D496F5E1EA37BDD00183A6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D496F5C1EA37BDD00183A6B /* LaunchScreen.storyboard */; };
 		9D496F691EA37BDD00183A6B /* GraffitiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D496F681EA37BDD00183A6B /* GraffitiTests.m */; };
 		9D496F741EA37BDD00183A6B /* GraffitiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D496F731EA37BDD00183A6B /* GraffitiUITests.m */; };
+		9D5AD1FE1EC2F06700D3B9A8 /* LFHBasicHandleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5AD1FC1EC2F06700D3B9A8 /* LFHBasicHandleView.m */; };
+		9D5AD1FF1EC2F06700D3B9A8 /* LFHBasicHandleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D5AD1FD1EC2F06700D3B9A8 /* LFHBasicHandleView.xib */; };
 		9D7447B01EA4A8EE00C767A4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D7447AF1EA4A8EE00C767A4 /* Default-568h@2x.png */; };
 		9D7447C91EA4BD8B00C767A4 /* LFHImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447B71EA4BD8B00C767A4 /* LFHImagePickerViewController.m */; };
 		9D7447CA1EA4BD8B00C767A4 /* LFHNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447B91EA4BD8B00C767A4 /* LFHNavViewController.m */; };
 		9D7447CB1EA4BD8B00C767A4 /* LFHBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447BD1EA4BD8B00C767A4 /* LFHBezierPath.m */; };
 		9D7447CC1EA4BD8B00C767A4 /* LFHGraffitiBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447C11EA4BD8B00C767A4 /* LFHGraffitiBoardViewController.m */; };
 		9D7447CD1EA4BD8B00C767A4 /* LFHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447C31EA4BD8B00C767A4 /* LFHMainViewController.m */; };
-		9D7447CE1EA4BD8B00C767A4 /* LFHPhotoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447C51EA4BD8B00C767A4 /* LFHPhotoEditViewController.m */; };
 		9D7447D71EA4C47E00C767A4 /* LFHGFDrawingBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7447D61EA4C47E00C767A4 /* LFHGFDrawingBoardView.m */; };
+		9D839E221EB089F400EEE534 /* LFHTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D839E211EB089F400EEE534 /* LFHTestView.m */; };
 		9D933B701EA8721300EF4751 /* UIColor+LFHColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D933B6F1EA8721300EF4751 /* UIColor+LFHColor.m */; };
 		9D933B731EA889D800EF4751 /* LFHCustomTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D933B721EA889D800EF4751 /* LFHCustomTool.m */; };
+		9DA7907F1EBF61BA002E1230 /* LFHExpressionScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7907E1EBF61BA002E1230 /* LFHExpressionScrollView.m */; };
+		9DA790821EBF62FF002E1230 /* ExpressionBtn.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DA790811EBF62FF002E1230 /* ExpressionBtn.plist */; };
 		9DB3B1A71EA9D6770031E826 /* LFHPenAttributeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3B1A61EA9D6770031E826 /* LFHPenAttributeView.m */; };
 		9DB3B1AA1EA9DA070031E826 /* LFHEraserAttributeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3B1A91EA9DA070031E826 /* LFHEraserAttributeView.m */; };
-		9DFAA9921EAA2CE0000FF8BB /* LFHHandleFontView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFAA9911EAA2CE0000FF8BB /* LFHHandleFontView.m */; };
+		9DBC07FC1EC04C5E006411D9 /* LFHExpressionBtnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBC07FB1EC04C5E006411D9 /* LFHExpressionBtnItem.m */; };
+		9DBC07FF1EC04CF5006411D9 /* LFHExpressionBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBC07FE1EC04CF5006411D9 /* LFHExpressionBtn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,9 +74,6 @@
 		9D46D8071EADE5C9008D473A /* LFHTextEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFHTextEditView.xib; sourceTree = "<group>"; };
 		9D46D8091EAF36F6008D473A /* LFHTextEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHTextEditView.h; sourceTree = "<group>"; };
 		9D46D80A1EAF36F6008D473A /* LFHTextEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHTextEditView.m; sourceTree = "<group>"; };
-		9D46D80C1EAF4E41008D473A /* LFHHandleImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFHHandleImageView.xib; sourceTree = "<group>"; };
-		9D46D80E1EAF4FE7008D473A /* LFHHandleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHHandleImageView.h; sourceTree = "<group>"; };
-		9D46D80F1EAF4FE7008D473A /* LFHHandleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHHandleImageView.m; sourceTree = "<group>"; };
 		9D46D8131EAF5FD3008D473A /* LFHBottomToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFHBottomToolsView.xib; sourceTree = "<group>"; };
 		9D46D8151EAF64BF008D473A /* LFHBottomToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHBottomToolsView.h; sourceTree = "<group>"; };
 		9D46D8161EAF64BF008D473A /* LFHBottomToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHBottomToolsView.m; sourceTree = "<group>"; };
@@ -90,6 +90,9 @@
 		9D496F6F1EA37BDD00183A6B /* GraffitiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraffitiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D496F731EA37BDD00183A6B /* GraffitiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraffitiUITests.m; sourceTree = "<group>"; };
 		9D496F751EA37BDD00183A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D5AD1FB1EC2F06700D3B9A8 /* LFHBasicHandleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHBasicHandleView.h; sourceTree = "<group>"; };
+		9D5AD1FC1EC2F06700D3B9A8 /* LFHBasicHandleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHBasicHandleView.m; sourceTree = "<group>"; };
+		9D5AD1FD1EC2F06700D3B9A8 /* LFHBasicHandleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFHBasicHandleView.xib; sourceTree = "<group>"; };
 		9D7447AF1EA4A8EE00C767A4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9D7447B61EA4BD8B00C767A4 /* LFHImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHImagePickerViewController.h; sourceTree = "<group>"; };
 		9D7447B71EA4BD8B00C767A4 /* LFHImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHImagePickerViewController.m; sourceTree = "<group>"; };
@@ -101,20 +104,25 @@
 		9D7447C11EA4BD8B00C767A4 /* LFHGraffitiBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHGraffitiBoardViewController.m; sourceTree = "<group>"; };
 		9D7447C21EA4BD8B00C767A4 /* LFHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHMainViewController.h; sourceTree = "<group>"; };
 		9D7447C31EA4BD8B00C767A4 /* LFHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHMainViewController.m; sourceTree = "<group>"; };
-		9D7447C41EA4BD8B00C767A4 /* LFHPhotoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHPhotoEditViewController.h; sourceTree = "<group>"; };
-		9D7447C51EA4BD8B00C767A4 /* LFHPhotoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHPhotoEditViewController.m; sourceTree = "<group>"; };
 		9D7447D51EA4C47E00C767A4 /* LFHGFDrawingBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHGFDrawingBoardView.h; sourceTree = "<group>"; };
 		9D7447D61EA4C47E00C767A4 /* LFHGFDrawingBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHGFDrawingBoardView.m; sourceTree = "<group>"; };
+		9D839E201EB089F400EEE534 /* LFHTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHTestView.h; sourceTree = "<group>"; };
+		9D839E211EB089F400EEE534 /* LFHTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHTestView.m; sourceTree = "<group>"; };
 		9D933B6E1EA8721300EF4751 /* UIColor+LFHColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LFHColor.h"; sourceTree = "<group>"; };
 		9D933B6F1EA8721300EF4751 /* UIColor+LFHColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LFHColor.m"; sourceTree = "<group>"; };
 		9D933B711EA889D800EF4751 /* LFHCustomTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHCustomTool.h; sourceTree = "<group>"; };
 		9D933B721EA889D800EF4751 /* LFHCustomTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHCustomTool.m; sourceTree = "<group>"; };
+		9DA7907D1EBF61BA002E1230 /* LFHExpressionScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHExpressionScrollView.h; sourceTree = "<group>"; };
+		9DA7907E1EBF61BA002E1230 /* LFHExpressionScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHExpressionScrollView.m; sourceTree = "<group>"; };
+		9DA790811EBF62FF002E1230 /* ExpressionBtn.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ExpressionBtn.plist; sourceTree = "<group>"; };
 		9DB3B1A51EA9D6770031E826 /* LFHPenAttributeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHPenAttributeView.h; sourceTree = "<group>"; };
 		9DB3B1A61EA9D6770031E826 /* LFHPenAttributeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHPenAttributeView.m; sourceTree = "<group>"; };
 		9DB3B1A81EA9DA070031E826 /* LFHEraserAttributeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHEraserAttributeView.h; sourceTree = "<group>"; };
 		9DB3B1A91EA9DA070031E826 /* LFHEraserAttributeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHEraserAttributeView.m; sourceTree = "<group>"; };
-		9DFAA9901EAA2CE0000FF8BB /* LFHHandleFontView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHHandleFontView.h; sourceTree = "<group>"; };
-		9DFAA9911EAA2CE0000FF8BB /* LFHHandleFontView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHHandleFontView.m; sourceTree = "<group>"; };
+		9DBC07FA1EC04C5E006411D9 /* LFHExpressionBtnItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHExpressionBtnItem.h; sourceTree = "<group>"; };
+		9DBC07FB1EC04C5E006411D9 /* LFHExpressionBtnItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHExpressionBtnItem.m; sourceTree = "<group>"; };
+		9DBC07FD1EC04CF5006411D9 /* LFHExpressionBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHExpressionBtn.h; sourceTree = "<group>"; };
+		9DBC07FE1EC04CF5006411D9 /* LFHExpressionBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHExpressionBtn.m; sourceTree = "<group>"; };
 		E9F877417DE520A14502F412 /* libPods-Graffiti.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Graffiti.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DA86C35C393E09C90B9962 /* Pods-Graffiti.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graffiti.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Graffiti/Pods-Graffiti.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +203,7 @@
 				9D496F5C1EA37BDD00183A6B /* LaunchScreen.storyboard */,
 				9D496F5F1EA37BDD00183A6B /* Info.plist */,
 				9D1C492D1EA753B600DFD694 /* ColorBtn.plist */,
+				9DA790811EBF62FF002E1230 /* ExpressionBtn.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -283,8 +292,6 @@
 				9D7447C31EA4BD8B00C767A4 /* LFHMainViewController.m */,
 				9D7447C01EA4BD8B00C767A4 /* LFHGraffitiBoardViewController.h */,
 				9D7447C11EA4BD8B00C767A4 /* LFHGraffitiBoardViewController.m */,
-				9D7447C41EA4BD8B00C767A4 /* LFHPhotoEditViewController.h */,
-				9D7447C51EA4BD8B00C767A4 /* LFHPhotoEditViewController.m */,
 				9D3BB0FD1EA77FE40085FAC8 /* LFHTestViewController.h */,
 				9D3BB0FE1EA77FE40085FAC8 /* LFHTestViewController.m */,
 			);
@@ -296,6 +303,8 @@
 			children = (
 				9D1C49271EA747E200DFD694 /* LFHColorBtnItem.h */,
 				9D1C49281EA747E200DFD694 /* LFHColorBtnItem.m */,
+				9DBC07FA1EC04C5E006411D9 /* LFHExpressionBtnItem.h */,
+				9DBC07FB1EC04C5E006411D9 /* LFHExpressionBtnItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,11 +326,6 @@
 				9D46D8151EAF64BF008D473A /* LFHBottomToolsView.h */,
 				9D46D8161EAF64BF008D473A /* LFHBottomToolsView.m */,
 				9D46D8131EAF5FD3008D473A /* LFHBottomToolsView.xib */,
-				9D46D80E1EAF4FE7008D473A /* LFHHandleImageView.h */,
-				9D46D80F1EAF4FE7008D473A /* LFHHandleImageView.m */,
-				9D46D80C1EAF4E41008D473A /* LFHHandleImageView.xib */,
-				9DFAA9901EAA2CE0000FF8BB /* LFHHandleFontView.h */,
-				9DFAA9911EAA2CE0000FF8BB /* LFHHandleFontView.m */,
 				9D46D8091EAF36F6008D473A /* LFHTextEditView.h */,
 				9D46D80A1EAF36F6008D473A /* LFHTextEditView.m */,
 				9D46D8071EADE5C9008D473A /* LFHTextEditView.xib */,
@@ -329,10 +333,19 @@
 				9DB3B1A61EA9D6770031E826 /* LFHPenAttributeView.m */,
 				9DB3B1A81EA9DA070031E826 /* LFHEraserAttributeView.h */,
 				9DB3B1A91EA9DA070031E826 /* LFHEraserAttributeView.m */,
+				9DA7907D1EBF61BA002E1230 /* LFHExpressionScrollView.h */,
+				9DA7907E1EBF61BA002E1230 /* LFHExpressionScrollView.m */,
+				9D5AD1FB1EC2F06700D3B9A8 /* LFHBasicHandleView.h */,
+				9D5AD1FC1EC2F06700D3B9A8 /* LFHBasicHandleView.m */,
+				9D5AD1FD1EC2F06700D3B9A8 /* LFHBasicHandleView.xib */,
 				9D3BB0FA1EA777DC0085FAC8 /* LFHColorScrollView.h */,
 				9D3BB0FB1EA777DC0085FAC8 /* LFHColorScrollView.m */,
 				9D1C492A1EA74C8000DFD694 /* LFHColorBtn.h */,
 				9D1C492B1EA74C8000DFD694 /* LFHColorBtn.m */,
+				9DBC07FD1EC04CF5006411D9 /* LFHExpressionBtn.h */,
+				9DBC07FE1EC04CF5006411D9 /* LFHExpressionBtn.m */,
+				9D839E201EB089F400EEE534 /* LFHTestView.h */,
+				9D839E211EB089F400EEE534 /* LFHTestView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -418,7 +431,7 @@
 					9D496F4A1EA37BDC00183A6B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = B97JB7KURN;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					9D496F631EA37BDD00183A6B = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -459,11 +472,12 @@
 			files = (
 				9D46D8081EADE5C9008D473A /* LFHTextEditView.xib in Resources */,
 				9D496F5E1EA37BDD00183A6B /* LaunchScreen.storyboard in Resources */,
+				9D5AD1FF1EC2F06700D3B9A8 /* LFHBasicHandleView.xib in Resources */,
+				9DA790821EBF62FF002E1230 /* ExpressionBtn.plist in Resources */,
 				9D496F5B1EA37BDD00183A6B /* Assets.xcassets in Resources */,
 				9D7447B01EA4A8EE00C767A4 /* Default-568h@2x.png in Resources */,
 				9D1C492E1EA753B700DFD694 /* ColorBtn.plist in Resources */,
 				9D46D8141EAF5FD3008D473A /* LFHBottomToolsView.xib in Resources */,
-				9D46D80D1EAF4E41008D473A /* LFHHandleImageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,25 +550,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D7447CE1EA4BD8B00C767A4 /* LFHPhotoEditViewController.m in Sources */,
+				9DA7907F1EBF61BA002E1230 /* LFHExpressionScrollView.m in Sources */,
 				9D7447CC1EA4BD8B00C767A4 /* LFHGraffitiBoardViewController.m in Sources */,
-				9DFAA9921EAA2CE0000FF8BB /* LFHHandleFontView.m in Sources */,
 				9D933B701EA8721300EF4751 /* UIColor+LFHColor.m in Sources */,
 				9D496F531EA37BDC00183A6B /* AppDelegate.m in Sources */,
 				9D496F501EA37BDC00183A6B /* main.m in Sources */,
 				9D3BB0FC1EA777DC0085FAC8 /* LFHColorScrollView.m in Sources */,
 				9D1C492C1EA74C8000DFD694 /* LFHColorBtn.m in Sources */,
+				9D5AD1FE1EC2F06700D3B9A8 /* LFHBasicHandleView.m in Sources */,
 				9D7447C91EA4BD8B00C767A4 /* LFHImagePickerViewController.m in Sources */,
+				9DBC07FC1EC04C5E006411D9 /* LFHExpressionBtnItem.m in Sources */,
 				9D46D80B1EAF36F6008D473A /* LFHTextEditView.m in Sources */,
+				9DBC07FF1EC04CF5006411D9 /* LFHExpressionBtn.m in Sources */,
 				9D7447CD1EA4BD8B00C767A4 /* LFHMainViewController.m in Sources */,
 				9D933B731EA889D800EF4751 /* LFHCustomTool.m in Sources */,
 				9D7447CA1EA4BD8B00C767A4 /* LFHNavViewController.m in Sources */,
 				9D46D8171EAF64BF008D473A /* LFHBottomToolsView.m in Sources */,
-				9D46D8101EAF4FE7008D473A /* LFHHandleImageView.m in Sources */,
 				9DB3B1A71EA9D6770031E826 /* LFHPenAttributeView.m in Sources */,
 				9DB3B1AA1EA9DA070031E826 /* LFHEraserAttributeView.m in Sources */,
 				9D7447D71EA4C47E00C767A4 /* LFHGFDrawingBoardView.m in Sources */,
 				9D3BB0FF1EA77FE40085FAC8 /* LFHTestViewController.m in Sources */,
+				9D839E221EB089F400EEE534 /* LFHTestView.m in Sources */,
 				9D7447CB1EA4BD8B00C767A4 /* LFHBezierPath.m in Sources */,
 				9D1C49291EA747E200DFD694 /* LFHColorBtnItem.m in Sources */,
 			);
@@ -696,13 +712,14 @@
 			baseConfigurationReference = F8DA86C35C393E09C90B9962 /* Pods-Graffiti.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = B97JB7KURN;
 				INFOPLIST_FILE = Graffiti/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lifuheng.Graffiti;
+				PRODUCT_BUNDLE_IDENTIFIER = .com.lifuheng.graffity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "ddcfa3a8-4d43-4b0b-9b15-337fd803d33b";
+				PROVISIONING_PROFILE_SPECIFIER = lfhcaomeituyamiaoshu;
 			};
 			name = Debug;
 		};
@@ -711,13 +728,14 @@
 			baseConfigurationReference = 3ABA430BCC55239167420A37 /* Pods-Graffiti.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = B97JB7KURN;
 				INFOPLIST_FILE = Graffiti/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lifuheng.Graffiti;
+				PRODUCT_BUNDLE_IDENTIFIER = .com.lifuheng.graffity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "ddcfa3a8-4d43-4b0b-9b15-337fd803d33b";
+				PROVISIONING_PROFILE_SPECIFIER = lfhcaomeituyamiaoshu;
 			};
 			name = Release;
 		};

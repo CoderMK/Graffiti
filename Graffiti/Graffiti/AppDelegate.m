@@ -41,16 +41,17 @@
     [self confitUShareSettings];
     /******************************/
     
-    
     // 创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
+    // 延时1.5秒，以便用户看清楚启动页
+    [NSThread sleepForTimeInterval:1.5];
+    
     // 选择窗口的根控制器
-    if (TEST) {
+    if (TEST) { // 测试用
         LFHTestViewController *rootVC = [[LFHTestViewController alloc] init];
-        rootVC.view.backgroundColor = [UIColor purpleColor];
         self.window.rootViewController = rootVC;
-    } else {
+    } else { // 正式
         LFHMainViewController *rootVC = [[LFHMainViewController alloc] init];
         LFHNavViewController *navVC = [[LFHNavViewController alloc] initWithRootViewController:rootVC];
         self.window.rootViewController = navVC;
@@ -101,7 +102,7 @@
     /*
      * 打开图片水印
      */
-    [UMSocialGlobal shareInstance].isUsingWaterMark = YES;
+//    [UMSocialGlobal shareInstance].isUsingWaterMark = YES;
     
     /*
      * 关闭强制验证https，可允许http图片分享，但需要在info.plist设置安全域名
@@ -122,6 +123,5 @@
      */
     //[[UMSocialManager defaultManager] removePlatformProviderWithPlatformTypes:@[@(UMSocialPlatformType_WechatFavorite)]];
 }
-
 
 @end

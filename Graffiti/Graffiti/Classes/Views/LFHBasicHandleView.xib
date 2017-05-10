@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LFHBasicHandleView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlQ-mf-s3f" userLabel="Top Tools View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJt-K6-7ty" userLabel="Cancel">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="rZp-8a-2nc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDI-5z-1je" userLabel="Finish">
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="完成">
+                                <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="finishBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="D5a-wC-MiP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="AJt-K6-7ty" firstAttribute="width" secondItem="RDI-5z-1je" secondAttribute="width" id="6CS-JP-Ua1"/>
+                        <constraint firstAttribute="height" constant="44" id="91T-wq-hKD"/>
+                        <constraint firstAttribute="bottom" secondItem="RDI-5z-1je" secondAttribute="bottom" id="A3s-Zb-LCO"/>
+                        <constraint firstItem="RDI-5z-1je" firstAttribute="leading" secondItem="AJt-K6-7ty" secondAttribute="trailing" id="EkC-l9-cWQ"/>
+                        <constraint firstItem="AJt-K6-7ty" firstAttribute="leading" secondItem="YlQ-mf-s3f" secondAttribute="leading" id="K29-hk-ee7"/>
+                        <constraint firstAttribute="bottom" secondItem="AJt-K6-7ty" secondAttribute="bottom" id="Oj2-1e-7c9"/>
+                        <constraint firstAttribute="trailing" secondItem="RDI-5z-1je" secondAttribute="trailing" id="jqy-Rf-PYp"/>
+                        <constraint firstItem="RDI-5z-1je" firstAttribute="top" secondItem="YlQ-mf-s3f" secondAttribute="top" id="mXP-1c-Pb3"/>
+                        <constraint firstItem="AJt-K6-7ty" firstAttribute="top" secondItem="YlQ-mf-s3f" secondAttribute="top" id="neI-dj-uz9"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPS-Hb-FKC" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="PPS-Hb-FKC" firstAttribute="top" secondItem="YlQ-mf-s3f" secondAttribute="bottom" id="4u6-ZB-Qhq"/>
+                <constraint firstItem="YlQ-mf-s3f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Dmk-77-XRQ"/>
+                <constraint firstAttribute="trailing" secondItem="YlQ-mf-s3f" secondAttribute="trailing" id="bNw-6L-o2B"/>
+                <constraint firstAttribute="trailing" secondItem="PPS-Hb-FKC" secondAttribute="trailing" id="e6e-vr-PLs"/>
+                <constraint firstAttribute="bottom" secondItem="PPS-Hb-FKC" secondAttribute="bottom" id="fmV-IF-tRf"/>
+                <constraint firstItem="PPS-Hb-FKC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="m0H-Pe-zaL"/>
+                <constraint firstItem="YlQ-mf-s3f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xuY-EO-Kgm"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="contentView" destination="PPS-Hb-FKC" id="FL4-WR-09u"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

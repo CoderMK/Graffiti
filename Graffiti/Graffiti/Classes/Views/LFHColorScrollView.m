@@ -16,10 +16,10 @@
 @interface LFHColorScrollView ()
 
 /* 颜色按钮数组 */
-@property (nonatomic, strong) NSMutableArray *btnArray;
+@property (nonatomic, strong) NSMutableArray *colorBtnArray;
 
 /* 按钮模型数组 */
-@property (nonatomic, strong) NSArray *btnItems;
+@property (nonatomic, strong) NSArray *colorBtnItems;
 
 /* 当前选中按钮 */
 @property (nonatomic, weak) LFHColorBtn *selectedBtn;
@@ -29,18 +29,18 @@
 @implementation LFHColorScrollView
 
 #pragma mark - getter / setter
-- (NSMutableArray *)btnArray {
-    if (!_btnArray) {
-        _btnArray = [NSMutableArray array];
+- (NSMutableArray *)colorBtnArray {
+    if (_colorBtnArray == nil) {
+        _colorBtnArray = [NSMutableArray array];
     }
-    return _btnArray;
+    return _colorBtnArray;
 }
 
--(NSArray *)btnItems {
-    if (!_btnItems) {
-        _btnItems = [LFHColorBtnItem mj_objectArrayWithFilename:@"ColorBtn.plist"];
+-(NSArray *)colorBtnItems {
+    if (_colorBtnItems == nil) {
+        _colorBtnItems = [LFHColorBtnItem mj_objectArrayWithFilename:@"ColorBtn.plist"];
     }
-    return _btnItems;
+    return _colorBtnItems;
 }
 
 #pragma mark - View
@@ -48,11 +48,10 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        // 初始化设置
+        [self setup];
         // 添加子控件
         [self setupSubviews];
-        // 设置 Scroll View 属性
-        self.contentSize = CGSizeMake(self.btnArray.count * BUTTON_WIDTH, 0);
-        self.showsHorizontalScrollIndicator = NO;
     }
     return self;
 }
@@ -62,22 +61,31 @@
  */
 - (void)layoutSubviews {
     [super layoutSubviews];
-    // Button
-    for (int i = 0; i < self.btnArray.count; i++) {
-        UIButton *btn = self.btnArray[i];
+    // 布局按钮
+    for (int i = 0; i < self.colorBtnArray.count; i++) {
+        UIButton *btn = self.colorBtnArray[i];
         btn.frame = CGRectMake(i * BUTTON_WIDTH, 0, BUTTON_WIDTH, self.bounds.size.height);
     }
 }
 
 #pragma mark - Setup
 /**
+ 初始化设置
+ */
+- (void)setup {
+    // 设置 Scroll View 属性
+    self.contentSize = CGSizeMake(self.colorBtnArray.count * BUTTON_WIDTH, 0);
+    self.showsHorizontalScrollIndicator = NO;
+}
+
+/**
  添加子控件
  */
 - (void)setupSubviews {
     // 添加按钮
-    for (int i = 0; i < self.btnItems.count; i++) {
-        LFHColorBtn *btn = [LFHColorBtn colorBtnWithItem:self.btnItems[i]];
-        [self.btnArray addObject:btn];
+    for (int i = 0; i < self.colorBtnItems.count; i++) {
+        LFHColorBtn *btn = [LFHColorBtn colorBtnWithItem:self.colorBtnItems[i]];
+        [self.colorBtnArray addObject:btn];
         [self addSubview:btn];
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
         

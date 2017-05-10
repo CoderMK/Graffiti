@@ -56,6 +56,15 @@
 }
 
 #pragma mark - UIView
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
+
 - (void)drawRect:(CGRect)rect {
     for (LFHBezierPath *path in self.pathArray) {
         if ([path isKindOfClass:[UIImage class]]) {
@@ -66,6 +75,14 @@
             [path stroke];
         }
     }
+}
+
+#pragma mark - Setup
+/**
+ 初始化涂鸦板颜色
+ */
+- (void)setup {
+    self.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark - Drawing Event
@@ -129,15 +146,15 @@
  保存图片到系统相册回调函数
  */
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    
     // 弹窗提示保存成功信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
     hud.mode = MBProgressHUDModeText;
     hud.label.text = @"保存成功";
     
     // 一秒后隐藏
+    __weak __typeof(self)weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [MBProgressHUD hideHUDForView:self animated:YES];
+        [MBProgressHUD hideHUDForView:weakSelf animated:YES];
     });
 }
 
@@ -167,13 +184,6 @@
         UIGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
         [self addGestureRecognizer:pan];
     } 
-}
-
-/**
- 文字
- */
-- (void)drawWithFont {
-    
 }
 
 /**
