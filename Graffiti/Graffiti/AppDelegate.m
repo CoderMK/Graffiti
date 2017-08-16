@@ -27,6 +27,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // yohe
     // Override point for customization after application launch.
     
     /********** 友盟分享 **********/
